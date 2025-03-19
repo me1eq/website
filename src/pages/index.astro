@@ -1,25 +1,93 @@
 ---
-import '../styles/global.css';
+import '../styles/global.css'; // Global styles
 // Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import Button from '../components/Button.astro'; // Button Component
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Female Soul Stories by Melek</title>
+  </head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
+  <body class="bg-beige-50 font-serif">
+    <!-- Main Section -->
+    <div class="grid place-items-center h-screen bg-gradient-to-r from-beige-200 via-beige-300 to-beige-500 text-gray-800">
+      <div class="text-center p-8">
+        <h1 class="text-4xl font-semibold mb-4">Willkommen bei Female Soul Stories by Melek</h1>
+        <p class="text-lg mb-6">Transformiere dein Leben mit 1:1 Mental Coaching – deine Reise zu mehr Selbstvertrauen, Klarheit und innerer Stärke beginnt hier.</p>
+        
+        <Button class="bg-olive-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-olive-600 transition duration-200">
+          Buche jetzt deine Erstberatung
+        </Button>
+
+        <div class="mt-8">
+			<a href="/philosophie" class="underline text-olive-200 hover:text-olive-300">Mehr über meine Coaching-Philosophie erfahren...</a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Was steht hinter dem Namen? -->
+    <section class="py-20 bg-beige-100">
+      <div class="container mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Was steht hinter „Female Soul Stories“?</h2>
+        <p class="text-xl text-gray-600 mb-6">„Female Soul Stories“ ist mehr als nur ein Name. Es ist eine Einladung, die Geschichten unserer Seele zu entdecken. Jede Frau trägt ihre eigene einzigartige Geschichte in sich – eine Geschichte voller Herausforderungen, Triumphe und tiefster Weisheit. Hier geht es darum, diese Geschichten zu erkennen, zu verstehen und die Kraft zu finden, sie in die Welt zu tragen.</p>
+        <p class="text-xl text-gray-600 mb-6">Ich helfe dir, dich mit deinem wahren Selbst zu verbinden, Blockaden zu überwinden und deine innere Stärke zu entfalten. Es ist ein Raum der Heilung, der Transformation und des Wachstums, in dem du den Mut findest, deine wahre Geschichte zu leben und die Welt mit deinem einzigartigen Licht zu bereichern.</p>
+        <Button class="bg-olive-500 text-white px-6 py-3 rounded-lg hover:bg-olive-600 transition duration-200">
+          Deine Reise beginnt hier
+        </Button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-beige-200">
+      <div class="container mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Über Melek</h2>
+        <p class="text-xl text-gray-600 mb-6">Ich bin Melek, eine erfahrene Mental-Coachin, die dir hilft, dein wahres Potenzial zu entfalten. Gemeinsam werden wir deine inneren Blockaden erkennen und überwinden, damit du ein erfülltes und selbstbestimmtes Leben führen kannst.</p>
+        <Button class="bg-olive-500 text-white px-6 py-3 rounded-lg hover:bg-olive-600 transition duration-200">
+          Mehr erfahren
+        </Button>
+      </div>
+    </section>
+
+    <!-- Coaching-Angebote -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Unsere Coaching-Angebote</h2>
+        <p class="text-lg text-gray-600 mb-6">Individuelle 1:1 Coaching-Sitzungen, die auf deine einzigartigen Bedürfnisse und Ziele abgestimmt sind. Egal, ob du deine Karriere vorantreiben oder mehr innere Ruhe finden möchtest – ich unterstütze dich auf deinem Weg.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-beige-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold mb-4">Einzelsitzungen</h3>
+            <p class="text-gray-700 mb-4">Fokussierte Coaching-Sitzungen, die dir helfen, konkrete Herausforderungen zu überwinden und Klarheit zu gewinnen.</p>
+            <Button buttonText ="bg-olive-500 text-white px-6 py-3 rounded-lg hover:bg-olive-600 transition duration-200">
+              Jetzt buchen
+            </Button>
+          </div>
+          <div class="bg-beige-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold mb-4">Langfristige Begleitung</h3>
+            <p class="text-gray-700 mb-4">Begleitung über einen längeren Zeitraum, um nachhaltige Veränderungen in deinem Leben zu erreichen und kontinuierlich an deinen Zielen zu arbeiten.</p>
+            <Button buttonText="bg-olive-500 text-white px-6 py-3 rounded-lg hover:bg-olive-600 transition duration-200">
+              Mehr erfahren
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="py-20 bg-beige-50">
+      <div class="container mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Bereit, den nächsten Schritt zu gehen?</h2>
+        <p class="text-lg text-gray-600 mb-6">Buch deine erste Sitzung oder melde dich für eine kostenlose Beratung an. Ich freue mich darauf, dich kennenzulernen und dich auf deiner Reise zu begleiten.</p>
+        <Button buttonText="bg-olive-500 text-white px-6 py-3 rounded-lg hover:bg-olive-600 transition duration-200">
+          Jetzt Termin buchen
+        </Button>
+      </div>
+    </section>
+  </body>
 </html>
